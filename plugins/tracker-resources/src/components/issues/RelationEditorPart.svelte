@@ -122,9 +122,12 @@
     min-width: 0;
     min-height: 0;
     font-size: 0.8125rem;
-    border-radius: 0.25rem;
+    border-radius: 0.375rem;
     // width: fit-content;
     border: 1px solid transparent;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease;
 
     &.between {
       justify-content: space-between;

@@ -249,13 +249,15 @@
 
     .divider {
       margin-top: 1rem;
-      width: 2.25rem;
+      width: 1.5rem;
       height: 1px;
     }
   }
   .divider {
     flex-shrink: 0;
     background-color: var(--theme-navpanel-icons-divider);
+    border-radius: 1px;
+    opacity: 0.7;
   }
   .apps-space {
     &-vertical {

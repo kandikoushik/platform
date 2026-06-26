@@ -40,14 +40,19 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--primary-button-color);
-    border-radius: 0.25rem;
+    border-radius: 0.625rem;
     outline: none;
     cursor: pointer;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(15, 23, 42, 0.08);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
 
     &:hover {
-      opacity: 0.8;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08), 0 6px 16px rgba(15, 23, 42, 0.12);
     }
     &:not(.mini) {
       width: 2rem;
@@ -58,7 +63,7 @@
       height: 1.75rem;
     }
     &.red {
-      background-color: rgb(246, 105, 77);
+      background-color: var(--primary-button-default);
     }
   }
   .logo-medium {
@@ -66,6 +71,15 @@
     cursor: pointer;
     width: 2rem;
     height: 2rem;
-    border-radius: 0.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(15, 23, 42, 0.08);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08), 0 6px 16px rgba(15, 23, 42, 0.12);
+    }
   }
 </style>

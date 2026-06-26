@@ -40,7 +40,7 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
-    class="antiNav-element"
+    class="antiNav-element dtsNav-help"
     class:selected
     on:click={() => {
       selected = true
@@ -62,10 +62,18 @@
 </div>
 
 <style lang="scss">
+  .dtsNav-help {
+    border-radius: 0.5rem;
+    transition: background-color 0.15s ease;
+  }
   .version-label {
     margin-left: auto;
+    padding: 0.0625rem 0.375rem;
     font-size: 0.6875rem;
+    font-weight: 500;
     color: var(--theme-dark-color);
+    background-color: var(--theme-navpanel-hovered);
+    border-radius: 0.375rem;
     user-select: all;
   }
 </style>

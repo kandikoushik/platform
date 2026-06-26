@@ -22,9 +22,10 @@
     .antiEditBoxInput {
       padding: 0.25rem 0.5rem;
       background-color: var(--theme-editbox-focus-color);
-      border-radius: 0.25rem;
+      border-radius: var(--extra-small-BorderRadius);
+      transition: box-shadow .15s var(--timing-main);
 
-      &:focus { box-shadow: 0 0 0 1px var(--theme-editbox-focus-border); }
+      &:focus { box-shadow: 0 0 0 2px var(--theme-editbox-focus-border); }
     }
   }
   .focusable:not(.underline, .default, .default-large, .ghost, .ghost-large, .modern-ghost-large) {
@@ -82,10 +83,11 @@
   }
   .default, .ghost, .default-large, .ghost-large {
     box-sizing: border-box;
-    line-height: 1.25rem;
-    border-radius: .375rem;
+    line-height: 1.4;
+    border-radius: var(--extra-small-BorderRadius);
     border: 1px solid transparent;
-    
+    transition: background-color .15s var(--timing-main), border-color .15s var(--timing-main), box-shadow .15s var(--timing-main);
+
     .antiEditBoxInput {
       &::placeholder { color: var(--theme-darker-color); }
     }
@@ -93,6 +95,7 @@
     &.focusable:focus-within {
       background-color: var(--theme-button-focused);
       border-color: var(--primary-button-default);
+      box-shadow: 0 0 0 3px var(--primary-button-outline);
     }
     &.disabled {
       color: var(--theme-dark-color);

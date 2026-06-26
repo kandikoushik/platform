@@ -153,6 +153,8 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: var(--body-font-size);
+  line-height: var(--dyuthi-line-height);
+  letter-spacing: -0.003em;
   color: var(--content-color);
   background-color: var(--theme-bg-color);
   user-select: none;

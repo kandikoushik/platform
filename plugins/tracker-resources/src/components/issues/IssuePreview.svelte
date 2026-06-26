@@ -77,7 +77,7 @@
         {/if}
         <span class="content-dark-color">{issue.identifier}</span>
       </div>
-      <span class="overflow-label text-xl caption-color">{issue.title}</span>
+      <span class="overflow-label text-xl caption-color preview-title">{issue.title}</span>
     </div>
   </div>
   <Scroller padding={'0.75rem 1.75rem 0'} noFade>
@@ -126,6 +126,11 @@
 {/if}
 
 <style lang="scss">
+  .preview-title {
+    margin-top: 0.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
   .description-container {
     overflow: hidden;
     height: auto;

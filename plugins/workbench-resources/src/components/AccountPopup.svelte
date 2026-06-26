@@ -253,7 +253,7 @@
 <svelte:component this={Menu} bind:this={menu} {actions} {addClass} on:close>
   <svelte:fragment slot="header">
     <div
-      class="ap-menuItem hoverable flex-row-center withIcon flex-grow"
+      class="ap-menuItem hoverable flex-row-center withIcon flex-grow dtsAccount-header"
       on:mousemove={() => {
         menu.clearFocus()
       }}
@@ -292,3 +292,15 @@
     <div class="ap-menuItem separator" />
   </svelte:fragment>
 </svelte:component>
+
+<style lang="scss">
+  .dtsAccount-header {
+    border-radius: 0.5rem;
+    transition: background-color 0.15s ease;
+
+    :global(.fs-bold.caption-color) {
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+  }
+</style>

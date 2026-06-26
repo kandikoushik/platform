@@ -1168,6 +1168,29 @@
       border-radius: var(--medium-BorderRadius);
       pointer-events: none;
     }
+
+    // DTS Work — modern navigator polish (scoped to the shell)
+    :global(.antiPanel-navigator) {
+      :global(.hulyNavItem-container) {
+        min-height: 2rem;
+        border-radius: 0.5rem;
+        transition:
+          background-color 0.15s ease,
+          color 0.15s ease;
+      }
+      :global(.hulyNavItem-container .hulyNavItem-label),
+      :global(.hulyNavItem-container .hulyNavItem-wideLabel) {
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: -0.005em;
+      }
+      :global(.hulyNavItem-container.selected) {
+        box-shadow: inset 0 0 0 1px var(--theme-navpanel-border);
+      }
+      :global(.hulyNavItem-container.selected .hulyNavItem-icon) {
+        color: var(--primary-button-default);
+      }
+    }
     .antiPanel-application.horizontal {
       border-radius: 0 0 var(--medium-BorderRadius) var(--medium-BorderRadius);
       border-top: none;
@@ -1196,13 +1219,13 @@
     }
     &.landscape {
       flex-direction: column;
-      margin-top: 1.25rem;
+      margin-top: 1.5rem;
 
       .logo-container {
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.5rem;
       }
       .topmenu-container {
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
       }
     }
 
@@ -1236,8 +1259,9 @@
 
     &.vertical {
       flex-direction: column;
-      margin-bottom: 1.25rem;
-      padding-top: 1rem;
+      margin-bottom: 1.5rem;
+      padding-top: 1.25rem;
+      gap: 0.375rem;
       border-top: 1px solid var(--theme-navpanel-divider);
 
       &-mobile {

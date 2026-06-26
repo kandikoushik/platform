@@ -89,7 +89,7 @@
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="antiPopup min-w-60" on:keydown={keyDown}>
+<div class="antiPopup min-w-60 dtsAppSwitcher" on:keydown={keyDown}>
   <div class="ap-space x2" />
   <div class="ap-scroll">
     <div class="ap-box">
@@ -126,3 +126,18 @@
   </div>
   <div class="ap-space x2" />
 </div>
+
+<style lang="scss">
+  .dtsAppSwitcher {
+    :global(.ap-menuItem) {
+      border-radius: 0.5rem;
+      transition: background-color 0.15s ease;
+    }
+    :global(.ap-menuItem .label) {
+      font-weight: 500;
+    }
+    :global(.ap-menuItem .ap-check) {
+      color: var(--primary-button-default);
+    }
+  }
+</style>

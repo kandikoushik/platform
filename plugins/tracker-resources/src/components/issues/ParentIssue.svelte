@@ -48,8 +48,20 @@
     min-width: 0;
     // line-height: 150%;
     height: 2.25rem;
+    background-color: var(--theme-bg-color);
     border: 1px solid var(--theme-button-border);
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      border-color: var(--theme-divider-color);
+      box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.06),
+        0 4px 12px rgba(15, 23, 42, 0.08);
+    }
   }
 
   .issue-title {

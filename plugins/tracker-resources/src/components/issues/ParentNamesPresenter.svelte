@@ -64,6 +64,7 @@
     .parent-label {
       flex-shrink: 5;
       color: var(--theme-dark-color);
+      transition: color 0.15s ease;
 
       &:hover {
         color: var(--theme-caption-color);

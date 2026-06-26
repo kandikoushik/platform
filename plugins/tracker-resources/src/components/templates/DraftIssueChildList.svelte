@@ -202,10 +202,19 @@
 <style lang="scss">
   .row {
     position: relative;
+    min-height: 2.75rem;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.375rem;
     border-bottom: 1px solid var(--theme-divider-color);
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background-color: var(--theme-button-hovered);
+    }
 
     .text {
       font-weight: 500;
+      line-height: 1.4;
       color: var(--theme-caption-color);
     }
 

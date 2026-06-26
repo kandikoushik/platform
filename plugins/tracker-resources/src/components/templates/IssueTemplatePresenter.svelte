@@ -61,6 +61,7 @@
     max-width: 15rem;
     font-size: 0.8125rem;
     color: var(--theme-content-color);
+    transition: color 0.15s ease;
 
     &:not(.noPointer) {
       cursor: pointer;

@@ -21,7 +21,18 @@
   export let small: boolean = false
 </script>
 
-<div class="hulyNavPanel-header" class:withButton class:small>
+<div class="hulyNavPanel-header dtsNavPanel-header" class:withButton class:small>
   <span class="overflow-label"><Label {label} /></span>
   <slot />
 </div>
+
+<style lang="scss">
+  .dtsNavPanel-header {
+    letter-spacing: -0.01em;
+
+    .overflow-label {
+      font-weight: 600;
+      line-height: 1.4;
+    }
+  }
+</style>

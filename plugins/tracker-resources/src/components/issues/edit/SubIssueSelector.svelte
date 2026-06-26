@@ -211,8 +211,19 @@
     max-width: fit-content;
     line-height: 150%;
     border: $border;
-    border-radius: 0.25rem;
-    box-shadow: var(--primary-shadow);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--theme-bg-color);
+    box-shadow:
+      0 1px 2px rgba(15, 23, 42, 0.06),
+      0 4px 12px rgba(15, 23, 42, 0.08);
+    transition: box-shadow 0.15s ease;
+
+    &:hover {
+      box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.08),
+        0 6px 16px rgba(15, 23, 42, 0.12);
+    }
 
     .item {
       position: relative;
@@ -233,12 +244,16 @@
 
   .parent-issue {
     padding: $padding;
+    transition: background-color 0.15s ease;
 
     .issue-title {
       color: var(--accent-color);
-      transition: color 0.15s;
+      transition: color 0.15s ease;
     }
 
+    &:hover {
+      background-color: var(--theme-button-hovered);
+    }
     &:hover .issue-title {
       color: var(--caption-color);
     }
@@ -250,10 +265,13 @@
   .sub-issues {
     padding: $padding;
     color: var(--content-color);
-    transition: color 0.15s;
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease;
 
     &:hover {
       color: var(--caption-color);
+      background-color: var(--theme-button-hovered);
     }
     &:active {
       color: var(--accent-color);

@@ -359,6 +359,7 @@
   border: 1px solid transparent;
   transition-property: border, background-color, color, box-shadow;
   transition-duration: .15s;
+  transition-timing-function: var(--timing-main);
   &.testing {
     transition-duration: 0;
   }
@@ -411,10 +412,10 @@
 
   &.short { max-width: 8.5rem; }
   &.accent { font-weight: 500; }
-  &.sh-no-shape { border-radius: .375rem; }
-  &.sh-round-small { border-radius: .25rem; }
-  &.sh-round { border-radius: .5rem; }
-  &.sh-round2 { border-radius: .75rem; }
+  &.sh-no-shape { border-radius: var(--extra-small-BorderRadius); }
+  &.sh-round-small { border-radius: var(--min-BorderRadius); }
+  &.sh-round { border-radius: var(--small-BorderRadius); }
+  &.sh-round2 { border-radius: var(--medium-BorderRadius); }
   &.sh-circle { border-radius: 1rem; }
   &.sh-rectangle-right {
     border-top-left-radius: .25rem;

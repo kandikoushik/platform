@@ -56,40 +56,48 @@
     padding: 0;
     background-color: transparent;
     border: 1px solid transparent;
-    border-radius: 0.25rem;
+    border-radius: 0.625rem;
     cursor: pointer;
     outline: none;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease,
+      box-shadow 0.15s ease;
 
     &.loading {
       pointer-events: none;
     }
 
     &.large {
-      width: 2.25rem;
-      height: 2.25rem;
+      width: 2.5rem;
+      height: 2.5rem;
     }
     &.medium {
-      width: 2rem;
-      height: 2rem;
+      width: 2.125rem;
+      height: 2.125rem;
     }
     &.small,
     &.small .icon-container {
       width: calc(var(--status-bar-normal-height) - 8px);
       height: calc(var(--status-bar-normal-height) - 8px);
-      border-radius: 0.25rem;
+      border-radius: 0.5rem;
     }
     &.small.selected {
-      background-color: var(--theme-button-pressed);
+      background-color: var(--theme-navpanel-selected);
     }
 
     .icon-container {
       width: 1.25rem;
       height: 1.25rem;
       color: var(--theme-navpanel-icons-color);
+      transition: color 0.15s ease;
     }
 
-    &:hover .icon-container {
-      color: var(--theme-caption-color);
+    &:hover {
+      background-color: var(--theme-navpanel-hovered);
+      .icon-container {
+        color: var(--theme-caption-color);
+      }
     }
     &:focus {
       box-shadow: 0 0 0 2px var(--primary-button-outline);
@@ -99,10 +107,14 @@
     }
 
     &.selected {
-      background-color: var(--theme-button-pressed);
+      background-color: var(--theme-navpanel-selected);
+      box-shadow: inset 0 0 0 1px var(--theme-navpanel-border);
       .icon-container {
-        color: var(--theme-caption-color);
+        color: var(--primary-button-default);
       }
+    }
+    &.selected:hover {
+      background-color: var(--theme-navpanel-selected);
     }
     &.navigator {
       border-color: var(--theme-button-border);
