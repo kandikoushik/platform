@@ -217,7 +217,7 @@
       height: 100%;
     }
     &.paneld {
-      background: rgba(45, 50, 160, 0.5);
+      background: rgba(11, 64, 71, 0.55);
 
       .panel-base {
         padding-top: 5rem;
@@ -236,9 +236,9 @@
     height: 100%;
     min-width: 35rem;
     max-width: 41rem;
-    background: rgba(45, 50, 160, 0.5);
+    background: rgba(11, 64, 71, 0.55);
     mix-blend-mode: normal;
-    box-shadow: -30px 1.52px 173.87px #121437;
+    box-shadow: -30px 1.52px 173.87px #07262a;
     backdrop-filter: blur(157.855px);
     border-radius: 1rem;
 
@@ -247,7 +247,7 @@
       position: absolute;
       content: '';
       inset: 0;
-      background: radial-gradient(161.92% 96.11% at 11.33% 3.89%, #313d9a 0%, #202669 100%);
+      background: radial-gradient(161.92% 96.11% at 11.33% 3.89%, #0F5A63 0%, #0A3138 100%);
       border-radius: 1rem;
       z-index: -1;
     }
@@ -282,7 +282,7 @@
     position: absolute;
     content: '';
     inset: 0;
-    background: radial-gradient(161.92% 96.11% at 11.33% 3.89%, #313d9a 0%, #202669 100%);
+    background: radial-gradient(161.92% 96.11% at 11.33% 3.89%, #0F5A63 0%, #0A3138 100%);
     z-index: -1;
   }
   .panel::after {

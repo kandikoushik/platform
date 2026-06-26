@@ -18,18 +18,18 @@
   --primary-button-color: #fff;
   --primary-button-content-color: rgba(255, 255, 255, .8);
   --primary-button-border: rgba(255, 255, 255, .09);
-  --primary-button-outline: #5190EC;
-  --primary-button-transparent: rgba(43, 81, 144, 0.2);
+  --primary-button-outline: #3DB4C0;
+  --primary-button-transparent: rgba(14, 124, 134, 0.2);
 
-  --primary-button-default: #205DC2;
-  --primary-button-hovered: #3575de;
-  --primary-button-pressed: #1C52AB;
-  --primary-button-focused: #205DC2;
+  --primary-button-default: #0F7B86;
+  --primary-button-hovered: #138B97;
+  --primary-button-pressed: #0B626B;
+  --primary-button-focused: #0F7B86;
   --secondary-button-color: rgba(0, 0, 0, .8);
-  --secondary-button-default: #D3E1F8;
-  --secondary-button-hovered: #BDD2F5;
-  --secondary-button-pressed: #A7C3F1;
-  --secondary-button-focused: #BDD2F5;
+  --secondary-button-default: #D2EBEE;
+  --secondary-button-hovered: #BCDFE4;
+  --secondary-button-pressed: #A6D3DA;
+  --secondary-button-focused: #BCDFE4;
   --positive-button-default: #05A05C;
   --positive-button-hovered: #05AD63;
   --positive-button-pressed: #019253;
@@ -82,7 +82,7 @@
   --theme-state-positive-background-hover: rgba(5, 160, 92, .2);
   --theme-state-positive-border-color: rgba(5, 160, 92, .15);
 
-  --text-editor-selected-node-background: rgba(43, 81, 144, 0.1);
+  --text-editor-selected-node-background: rgba(15, 123, 134, 0.12);
   --text-editor-selected-node-color: #93CAF3;
 
   --text-editor-highlighted-node-warning-active-background-color: rgba(255, 203, 0, .24);
@@ -211,7 +211,7 @@
   --theme-kanban-card-footer: rgba(217, 217, 217, .07);
 
   --theme-editbox-focus-color: rgba(255, 255, 255, .04);
-  --theme-editbox-focus-border: #5190EC;
+  --theme-editbox-focus-border: #2BA0AD;
   --theme-tablist-color: rgba(0, 0, 0, .02);
   --theme-tablist-plain-color: #2A64C4; // Light
   --theme-tablist-plain-divider: rgba(255, 255, 255, .07); // Light invert
@@ -257,7 +257,7 @@
   --theme-tooltip-key-bg: rgba(255, 255, 255, .08);
 
   --theme-inbox-notify: #F47758;
-  --theme-inbox-people-notify: #2B5190;
+  --theme-inbox-people-notify: #1E6E78;
   --theme-inbox-activity-bgcolor: #0E0F10;
   --theme-inbox-activitymsg-bgcolor: rgba(255, 255, 255, .03);
   --theme-inbox-activitymsg-divider: rgba(255, 255, 255, .1);
@@ -269,7 +269,7 @@
   --theme-toggle-on-sw-color: #fff;
   --theme-toggle-bg-color: rgba(120, 120, 128, 0.32);
   --theme-toggle-bg-hover: rgba(120, 120, 128, 0.64);
-  --theme-toggle-on-bg-color: #205dc2;
+  --theme-toggle-on-bg-color: #0F7B86;
   --theme-toggle-on-bg-hover: #1A53AF;
   --theme-radio-bg-color: #343442;
 
@@ -410,7 +410,7 @@
 
   --calendar-event-back-color: #252A32;
   --calendar-event-border-color: rgba(55, 122, 230, 0.28);
-  --calendar-event-handle-color: #205DC2;
+  --calendar-event-handle-color: #0F7B86;
 
   --theme-label-green-color: rgba(34, 197, 94, .8);
   --theme-label-green-bg-color: rgba(34, 197, 94, .08);
@@ -546,7 +546,7 @@
   --theme-kanban-card-footer: rgba(0, 0, 0, .04);
 
   --theme-editbox-focus-color: rgba(0, 0, 0, .08);
-  --theme-editbox-focus-border: #5190EC;
+  --theme-editbox-focus-border: #2BA0AD;
   --theme-tablist-color: rgba(0, 0, 0, .02);
   --theme-tablist-plain-color: #2A64C4;
   --theme-tablist-plain-divider: rgba(0, 0, 0, .07);
@@ -562,7 +562,7 @@
   --theme-popup-divider: rgba(0, 0, 0, .09);
   --theme-popup-header: #EBEBEB;
   --theme-popup-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
-  --theme-popup-checkicon: #205DC2;
+  --theme-popup-checkicon: #0F7B86;
   --theme-popup-deactivated: #C7C8CA;
   --theme-panel-color: #FFFFFF;
   --theme-calendar-today-color: #000;
@@ -592,19 +592,19 @@
   --theme-tooltip-key-bg: rgba(255, 255, 255, .08);
 
   --theme-inbox-notify: #F47758;
-  --theme-inbox-people-notify: #2B5190;
+  --theme-inbox-people-notify: #1E6E78;
   --theme-inbox-activity-bgcolor: #fff;
   --theme-inbox-activitymsg-bgcolor: #F2F2F2;
   --theme-inbox-activitymsg-divider: rgba(0, 0, 0, .1);
   --theme-inbox-activitymsg-border: rgba(0, 0, 0, .03);
   --theme-inbox-counter-bgcolor: rgba(0, 0, 0, .06);
-  --theme-inbox-people-counter-bgcolor: rgba(43, 81, 144, .1);
+  --theme-inbox-people-counter-bgcolor: rgba(15, 123, 134, .1);
 
   --theme-toggle-sw-color: #fff;
   --theme-toggle-on-sw-color: #fff;
   --theme-toggle-bg-color: rgba(120, 120, 128, 0.32);
   --theme-toggle-bg-hover: rgba(120, 120, 128, 0.64);
-  --theme-toggle-on-bg-color: #205dc2;
+  --theme-toggle-on-bg-color: #0F7B86;
   --theme-toggle-on-bg-hover: #1A53AF;
   --theme-radio-bg-color: #E5E5E5;
 
@@ -740,7 +740,7 @@
   --theme-wizard-not-visited-color: #e8e9e9;
 
   --calendar-event-back-color: #f3f6fb;
-  --calendar-event-border-color: rgba(43, 81, 144, 0.2);
+  --calendar-event-border-color: rgba(15, 123, 134, 0.2);
   --calendar-event-handle-color: #2b5190;
 
   --theme-button-contrast-color: #fff;
