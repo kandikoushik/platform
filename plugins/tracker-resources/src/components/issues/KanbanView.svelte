@@ -499,15 +499,25 @@
 
 <style lang="scss">
   .header {
-    margin: 0 0.75rem 0.5rem;
-    padding: 0 0.5rem 0 1.25rem;
+    margin: 0.5rem 0.625rem 0.25rem;
+    padding: 0 0.375rem 0 0.875rem;
     height: 2.5rem;
     min-height: 2.5rem;
     border: 1px solid var(--theme-divider-color);
-    border-radius: 0.25rem;
+    border-radius: 0.625rem;
 
     .counter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.25rem;
+      height: 1.25rem;
+      padding: 0 0.375rem;
+      font-size: 0.75rem;
+      font-weight: 600;
       color: var(--theme-dark-color);
+      background-color: var(--theme-bg-color);
+      border-radius: 0.5rem;
     }
     .tools {
       opacity: 0;
@@ -521,13 +531,14 @@
     display: flex;
     flex-direction: column;
     min-height: 6.5rem;
-    border-radius: 0.25rem;
+    border-radius: 0.75rem;
 
     .card-header {
       padding: 0.75rem 1rem 0;
     }
     .card-content {
       margin: 0.5rem 1rem;
+      font-weight: 500;
     }
     /* Global styles in components.scss */
     .card-labels {

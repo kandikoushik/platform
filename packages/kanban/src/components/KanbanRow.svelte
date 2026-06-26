@@ -163,7 +163,20 @@
   .card-container {
     background-color: var(--theme-kanban-card-bg-color);
     border: 1px solid var(--theme-kanban-card-border);
-    border-radius: 0.25rem;
+    border-radius: 0.75rem;
+    box-shadow:
+      0 1px 2px rgba(15, 23, 42, 0.06),
+      0 1px 3px rgba(15, 23, 42, 0.04);
+    transition:
+      box-shadow 0.15s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      box-shadow:
+        0 4px 10px rgba(15, 23, 42, 0.1),
+        0 2px 4px rgba(15, 23, 42, 0.06);
+      transform: translateY(-2px);
+    }
 
     &.checked {
       background-color: var(--highlight-select);
