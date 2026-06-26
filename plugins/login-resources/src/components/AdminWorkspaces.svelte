@@ -40,7 +40,7 @@
     showPopup,
     ticker
   } from '@hcengineering/ui'
-  import { workbenchId } from '@hcengineering/workbench'
+  import workbench, { workbenchId } from '@hcengineering/workbench'
   import { getAccountClient, getAllWorkspaces, getRegionInfo, performWorkspaceOperation } from '../utils'
 
   $: now = $ticker
@@ -341,6 +341,11 @@
 {#if isAdmin}
   <Scroller>
     <div class="flex-column flex-grow p-5">
+      <div class="anticrm-panel flex-column p-4 mb-4">
+        <div class="fs-title p-3">Server Manager</div>
+        <svelte:component this={getMetadata(workbench.component.ServerManager)} />
+      </div>
+
       <div class="anticrm-panel flex-row flex-grow" style:overflow-y={'auto'}>
         <div class="flex-between">
           <div class="fs-title p-3">Workspaces administration panel</div>
