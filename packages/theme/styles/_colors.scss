@@ -176,8 +176,8 @@
   --theme-comp-header-color: #1E2024;
   --theme-divider-color: rgba(255, 255, 255, .06);
   --theme-bg-divider-color: #22242A;
-  --theme-mention-bg-color: rgba(55, 122, 230, 0.1);
-  --theme-mention-focused-bg-color: rgba(55, 122, 230, 0.2);
+  --theme-mention-bg-color: rgba(15, 123, 134, 0.1);
+  --theme-mention-focused-bg-color: rgba(15, 123, 134, 0.2);
   --theme-broken-mention-color: rgba(255, 255, 255, .4);
   --theme-broken-mention-bg-color: rgba(255, 255, 255, .12);
   --theme-broken-mention-focused-bg-color: rgba(255, 255, 255, .2);
@@ -188,7 +188,7 @@
   --theme-dark-color: rgba(255, 255, 255, .6);
   --theme-content-color: rgba(255, 255, 255, .8);
   --theme-caption-color: #FFF;
-  --theme-link-color: #377AE6;
+  --theme-link-color: #0E7C86;
 
   --theme-list-border-color: rgba(255, 255, 255, .05);
   --theme-list-header-color: #C88C65;
@@ -238,7 +238,7 @@
   --theme-calendar-weekend-bgcolor: rgba(242, 153, 74, .05);
   --theme-calendar-weekend-stroke-color: #444;
   --theme-calendar-event-caption-color: rgba(0, 0, 0, .6);
-  --theme-calendar-event-available-color: rgba(55, 122, 230, .2);
+  --theme-calendar-event-available-color: rgba(15, 123, 134, .2);
   --theme-calendar-event-available-bgcolor: #f6f9fe;
   --theme-calendar-event-unavailable-color: rgba(244, 119, 88, .2);
   --theme-calendar-event-unavailable-bgcolor: #fdece7;
@@ -400,16 +400,16 @@
   --theme-state-ghost-color: rgba(123, 123, 123, 0.6);
   --theme-state-ghost-background-color: rgba(123, 123, 123, 0.1);
   --theme-state-ghost-border-color: transparent;
-  --theme-state-primary-color: #377AE6;
-  --theme-state-primary-background-color: rgba(55, 122, 230, 0.14);
-  --theme-state-primary-border-color: rgba(55, 122, 230, 0.26);
+  --theme-state-primary-color: #0E7C86;
+  --theme-state-primary-background-color: rgba(15, 123, 134, 0.14);
+  --theme-state-primary-border-color: rgba(15, 123, 134, 0.26);
   --theme-state-regular-color: #7b7b7b;
   --theme-state-regular-background-color: rgba(123, 123, 123, 0.1);
   --theme-state-regular-border-color: rgba(123, 123, 123, 0.15);
   --theme-wizard-not-visited-color: #34343c;
 
   --calendar-event-back-color: #252A32;
-  --calendar-event-border-color: rgba(55, 122, 230, 0.28);
+  --calendar-event-border-color: rgba(15, 123, 134, 0.28);
   --calendar-event-handle-color: #0F7B86;
 
   --theme-label-green-color: rgba(34, 197, 94, .8);
@@ -507,8 +507,8 @@
   --theme-comp-header-color: #FBFBFC;
   --theme-divider-color: rgba(0, 0, 0, .06);
   --theme-bg-divider-color: #E3E3E5;
-  --theme-mention-bg-color: rgba(55, 122, 230, 0.1);
-  --theme-mention-focused-bg-color: rgba(55, 122, 230, 0.2);
+  --theme-mention-bg-color: rgba(15, 123, 134, 0.1);
+  --theme-mention-focused-bg-color: rgba(15, 123, 134, 0.2);
   --theme-broken-mention-bg-color: rgba(0, 0, 0, .12);
   --theme-broken-mention-color: rgba(0, 0, 0, .4);
   --theme-broken-mention-focused-bg-color: rgba(0, 0, 0, .2);
@@ -523,7 +523,7 @@
   --theme-dark-color: rgba(0, 0, 0, .6);
   --theme-content-color: rgba(0, 0, 0, .8);
   --theme-caption-color: #000;
-  --theme-link-color: #377AE6;
+  --theme-link-color: #0E7C86;
 
   --theme-list-border-color: rgba(0, 0, 0, .09);
   --theme-list-header-color: red; //#ECD4CA;
@@ -573,7 +573,7 @@
   --theme-calendar-weekend-bgcolor: rgba(242, 153, 74, .1);
   --theme-calendar-weekend-stroke-color: #ddd;
   --theme-calendar-event-caption-color: rgba(0, 0, 0, .8);
-  --theme-calendar-event-available-color: rgba(55, 122, 230, .2);
+  --theme-calendar-event-available-color: rgba(15, 123, 134, .2);
   --theme-calendar-event-available-bgcolor: #f6f9fe;
   --theme-calendar-event-unavailable-color: rgba(244, 119, 88, .2);
   --theme-calendar-event-unavailable-bgcolor: #fdece7;
@@ -741,7 +741,7 @@
 
   --calendar-event-back-color: #f3f6fb;
   --calendar-event-border-color: rgba(15, 123, 134, 0.2);
-  --calendar-event-handle-color: #2b5190;
+  --calendar-event-handle-color: #0F7B86;
 
   --theme-button-contrast-color: #fff;
   --theme-button-contrast-enabled: rgba(0, 0, 0, .8);
