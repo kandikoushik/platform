@@ -3,7 +3,7 @@
   import { IModeSelector, ModeSelector, SearchInput, Header, Breadcrumb, HeaderAdaptive } from '@hcengineering/ui'
   import type { Asset } from '@hcengineering/platform'
   import { ComponentExtensions, getClient } from '@hcengineering/presentation'
-  import view, { Viewlet, type ViewletViewAction } from '@hcengineering/view'
+  import view, { Viewlet, ViewletDescriptor, type ViewletViewAction } from '@hcengineering/view'
   import { getViewletSpecialActions } from '../viewletUtils'
   import ViewletSelector from './ViewletSelector.svelte'
   import FilterButton from './filter/FilterButton.svelte'
@@ -20,6 +20,7 @@
   export let modeSelectorProps: IModeSelector | undefined = undefined
   export let adaptive: HeaderAdaptive = 'doubleRow'
   export let resultQuery: DocumentQuery<Doc> = {}
+  export let defaultViewletDescriptor: Ref<ViewletDescriptor> | undefined = undefined
 
   let scroller: HTMLElement
 
@@ -33,7 +34,13 @@
   hideExtra={!$$slots.extra && modeSelectorProps === undefined}
 >
   <svelte:fragment slot="beforeTitle">
-    <ViewletSelector bind:viewlet bind:viewlets ignoreFragment viewletQuery={viewletQuery ?? { attachTo: _class }} />
+    <ViewletSelector
+      bind:viewlet
+      bind:viewlets
+      ignoreFragment
+      {defaultViewletDescriptor}
+      viewletQuery={viewletQuery ?? { attachTo: _class }}
+    />
     <slot name="header-tools" />
   </svelte:fragment>
 

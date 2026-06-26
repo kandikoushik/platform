@@ -537,8 +537,11 @@
       padding: 0.75rem 1rem 0;
     }
     .card-content {
-      margin: 0.5rem 1rem;
-      font-weight: 500;
+      margin: 0.5rem 1rem 0.625rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--theme-caption-color);
     }
     /* Global styles in components.scss */
     .card-labels {

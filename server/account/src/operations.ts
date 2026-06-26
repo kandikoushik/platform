@@ -107,6 +107,7 @@ import {
   setPassword,
   setTimezone,
   signUpByEmail,
+  assertMailboxAllowed,
   updateWorkspaceRole,
   verifyAllowedRole,
   verifyAllowedServices,
@@ -184,6 +185,9 @@ export async function login (
   }
 
   const normalizedEmail = cleanEmail(email)
+
+  // Dyuthi: only real mailboxes (or admins) may log in.
+  await assertMailboxAllowed(ctx, normalizedEmail)
 
   try {
     const emailSocialId = await getEmailSocialId(db, normalizedEmail)

@@ -2,6 +2,7 @@
   import { DocumentQuery, Ref, Space, WithLookup } from '@hcengineering/core'
   import { Asset, IntlString, translateCB } from '@hcengineering/platform'
   import { ComponentExtensions } from '@hcengineering/presentation'
+  import task from '@hcengineering/task'
   import { Issue, TrackerEvents } from '@hcengineering/tracker'
   import { IModeSelector, themeStore } from '@hcengineering/ui'
   import { ViewOptions, Viewlet } from '@hcengineering/view'
@@ -42,6 +43,7 @@
   bind:search
   showLabelSelector={$$slots.label_selector}
   viewletQuery={{ attachTo: tracker.class.Issue, variant: { $nin: ['subissue', 'component', 'milestone'] } }}
+  defaultViewletDescriptor={task.viewlet.Kanban}
   {viewlets}
   {label}
   {space}

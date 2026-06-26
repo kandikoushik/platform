@@ -549,6 +549,8 @@ export async function sendOtp (
 
   switch (socialId.type) {
     case SocialIdType.EMAIL: {
+      // Dyuthi: only real mailboxes (or admins) may request a login/signup code.
+      await assertMailboxAllowed(ctx, socialId.value)
       sendMethod = sendOtpEmail
       break
     }
@@ -645,6 +647,45 @@ export async function createAccount (
   return socialId
 }
 
+/**
+ * Dyuthi: gate account creation / OTP to emails that exist as real mailboxes on
+ * the mail server (mail.dyuthitech.in). Enabled only when MAILBOX_ALLOWLIST_URL
+ * is set; fails closed (deny) if the mail server can't confirm the mailbox.
+ */
+export async function assertMailboxAllowed (ctx: MeasureContext, email: string): Promise<void> {
+  const baseUrl = process.env.MAILBOX_ALLOWLIST_URL
+  if (baseUrl == null || baseUrl === '') return // feature disabled
+
+  const key = process.env.MAILBOX_ALLOWLIST_KEY ?? ''
+  const normalized = cleanEmail(email)
+
+  // Admins (ADMIN_EMAILS) are always allowed even if they aren't hosted mailboxes.
+  const adminEmails = (process.env.ADMIN_EMAILS ?? '')
+    .split(',')
+    .map((e) => cleanEmail(e))
+    .filter((e) => e !== '')
+  if (adminEmails.includes(normalized)) return
+
+  let allowed = false
+  try {
+    const res = await fetch(`${baseUrl}?email=${encodeURIComponent(normalized)}`, {
+      headers: key !== '' ? { 'x-allowlist-key': key } : {}
+    })
+    if (res.ok) {
+      const data = (await res.json()) as { exists?: boolean }
+      allowed = data?.exists === true
+    } else {
+      ctx.error('mailbox allowlist check returned non-ok', { status: res.status, email: normalized })
+    }
+  } catch (err: any) {
+    ctx.error('mailbox allowlist check failed', { err: err?.message, email: normalized })
+  }
+  if (!allowed) {
+    ctx.warn('rejected non-mailbox email', { email: normalized })
+    throw new PlatformError(new Status(Severity.ERROR, platform.status.Forbidden, {}))
+  }
+}
+
 export async function signUpByEmail (
   ctx: MeasureContext,
   db: AccountDB,
@@ -657,6 +698,7 @@ export async function signUpByEmail (
   automatic = false
 ): Promise<{ account: AccountUuid, socialId: PersonId }> {
   const normalizedEmail = cleanEmail(email)
+  await assertMailboxAllowed(ctx, normalizedEmail)
 
   const emailSocialId = await getEmailSocialId(db, normalizedEmail)
   let account: AccountUuid
